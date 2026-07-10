@@ -1,3 +1,251 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+/* ==========================================================================
+   INTO THE SPIDER-VERSE — full-comic theme for Quartz v5
+   --------------------------------------------------------------------------
+   This file is injected AFTER the quartz-base cascade layer, so plain
+   selectors here win without !important.
+
+   Rules of the theme:
+   - All page/text colors come from Quartz CSS variables (--light, --dark,
+     --secondary, --tertiary, ...) so light/dark mode both work untouched.
+     Only decorative SHADOW colors use fixed CMYK-ink rgba values (cyan /
+     magenta), which read as "misprinted ink" on both paper and night mode.
+   - Body copy (Nunito) is never decorated — effects live on chrome,
+     headings, and links only.
+   - Every animation/transition added here sits behind
+     @media (prefers-reduced-motion: no-preference).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BEN-DAY HALFTONE DOTS
+   body paints the page background (base.scss sets background-color:
+   var(--light) on body), so the dot texture attaches there.
+   color-mix keeps the dot ink derived from the theme's own --gray, so the
+   texture adapts to light/dark automatically. 22% alpha + 1.2px dots on a
+   22px grid is visible up close but never competes with text.
+   -------------------------------------------------------------------------- */
+body {
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--gray) 22%, transparent) 1.2px,
+    transparent 1.2px
+  );
+  background-size: 22px 22px;
+}
+
+/* --------------------------------------------------------------------------
+   2. SITE TITLE — comic-cover masthead
+   .page-title is the <h2> in the left sidebar wrapping the home link.
+   Slight tilt + tracked-out Bangers + a CMYK "misprint" double shadow:
+   cyan plate pushed one way, magenta plate the other, like off-register
+   printing. The static tilt is fine for reduced-motion users (it does not
+   move); only the hover jitter is motion, so only that is gated.
+   -------------------------------------------------------------------------- */
+.page-title {
+  transform: rotate(-2deg);
+  transform-origin: center;
+  letter-spacing: 0.06em;
+  text-shadow:
+    0.05em 0.04em 0 rgba(0, 229, 255, 0.8),
+    -0.05em -0.03em 0 rgba(255, 46, 151, 0.8);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* One quick skew wobble per hover — plays once, then settles back on the
+     base rotate(-2deg). Not an infinite loop; a loop would be exhausting. */
+  @keyframes title-jitter {
+    0% {
+      transform: rotate(-2deg) skewX(0deg);
+    }
+    25% {
+      transform: rotate(-1.3deg) skewX(-1.5deg);
+    }
+    50% {
+      transform: rotate(-2.5deg) skewX(1deg);
+    }
+    75% {
+      transform: rotate(-1.8deg) skewX(-0.6deg);
+    }
+    100% {
+      transform: rotate(-2deg) skewX(0deg);
+    }
+  }
+
+  .page-title:hover {
+    animation: title-jitter 0.4s ease-in-out 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. HEADINGS — Bangers needs breathing room
+   Bangers is a condensed display face; a little tracking keeps it legible.
+   Applied to all headings (they all use --headerFont) plus the page's
+   .article-title h1.
+   Misprint shadows fade down the hierarchy: h1 gets a subtle ~2px offset at
+   .45 alpha, h2 an even fainter echo, h3-h6 stay clean for readability.
+   -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.04em;
+}
+
+article h1,
+.article-title {
+  text-shadow:
+    2px 1.5px 0 rgba(0, 229, 255, 0.45),
+    -2px -1.5px 0 rgba(255, 46, 151, 0.45);
+}
+
+article h2 {
+  text-shadow:
+    1.5px 1px 0 rgba(0, 229, 255, 0.3),
+    -1.5px -1px 0 rgba(255, 46, 151, 0.3);
+}
+
+/* h3-h6 intentionally carry no shadow — small sizes blur into mud. */
+
+/* --------------------------------------------------------------------------
+   4. LINKS — chromatic fringe on hover
+   Base styles already color links var(--secondary) and flip to
+   var(--tertiary) on hover; we only add a faint 1px split-ink shadow.
+   text-shadow never affects layout, so there is no shift on hover.
+   Shadows derive from the theme accents via color-mix, so light mode
+   fringes red/blue and dark mode fringes pink/cyan automatically.
+   -------------------------------------------------------------------------- */
+a:hover {
+  text-shadow:
+    1px 0 0 color-mix(in srgb, var(--secondary) 40%, transparent),
+    -1px 0 0 color-mix(in srgb, var(--tertiary) 40%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   5. COMIC PANELS — graph + explorer as stickers on the page
+   .graph > .graph-outer is the box that actually holds the rendered graph
+   (base gives it a 1px border we thicken), .explorer is the file tree in
+   the left sidebar. Both get an inked 2px frame and a hard offset "sticker"
+   shadow tinted with the theme accent.
+   -------------------------------------------------------------------------- */
+.graph > .graph-outer {
+  border: 2px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--secondary) 55%, transparent);
+}
+
+.explorer {
+  border: 2px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--secondary) 55%, transparent);
+  padding: 0.75rem 1rem;
+}
+
+/* On mobile the explorer collapses to a hamburger button — a panel frame
+   around a lone icon looks broken, so the sticker treatment comes off. */
+@media all and ($mobile) {
+  .explorer {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+/* The full-screen graph modal gets the same inked frame (no sticker shadow:
+   it floats over a blurred backdrop where an offset shadow reads as a bug). */
+.graph > .global-graph-outer > .global-graph-container {
+  border: 2px solid var(--lightgray);
+  border-radius: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   6. BLOCKQUOTES — character speech
+   Thick accent rule on the left, faint theme-highlight fill, a touch larger.
+   em/cite inside stay conventional so attributions read as attributions.
+   -------------------------------------------------------------------------- */
+blockquote {
+  border-left: 4px solid var(--secondary);
+  background-color: var(--highlight);
+  border-radius: 0 6px 6px 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.05em;
+}
+
+blockquote em {
+  font-style: italic;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.4em;
+  font-style: italic;
+  font-size: 0.9em;
+  color: var(--gray);
+}
+
+/* --------------------------------------------------------------------------
+   7. HR — web-line separator
+   Base draws hr as a filled bar; zero that out and draw a dashed thread.
+   -------------------------------------------------------------------------- */
+hr {
+  height: 0;
+  background: none;
+  background-color: transparent;
+  border: none;
+  border-top: 2px dashed var(--gray);
+}
+
+/* --------------------------------------------------------------------------
+   8. TEXT SELECTION — highlighter swipe in the accent ink
+   White text is deliberate here: hot pink (dark) and spider-red (light)
+   both carry enough contrast for white.
+   -------------------------------------------------------------------------- */
+::selection {
+  background: var(--secondary);
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   9. INTERACTIVE BUTTONS — sticker tilt on hover
+   Search button, dark-mode toggle, reader-mode toggle, and the global-graph
+   icon. Both the transition AND the hover transform sit behind the
+   reduced-motion gate, so sensitive users get zero jump.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  .search-button,
+  button.darkmode,
+  button.readermode,
+  .global-graph-icon {
+    transition: transform 0.15s ease-out;
+  }
+
+  .search-button:hover,
+  button.darkmode:hover,
+  button.readermode:hover,
+  .global-graph-icon:hover {
+    transform: rotate(-4deg) scale(1.1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. SCROLLBAR (WebKit) — thin web strand in accent ink
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
+}
