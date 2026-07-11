@@ -40,6 +40,26 @@ stray top-level folder would float around unlinked.)
 `templates/Daily Note.md` template — One line · What happened · What I
 learned · Tomorrow.
 
+## 🌙 Automated daily sync (Google Doc → site)
+
+Alternative daily flow: write in the **"Daily Log" Google Doc** from any device.
+A Windows scheduled task ("SpiderVerse Daily Sync", 22:00 daily) runs
+`scripts/daily_sync.py`, which:
+
+1. Fetches the Doc via its markdown-export link (Doc must be link-shared, Viewer)
+2. Slices out any dated entries not yet published (catches up missed days)
+3. Writes them to `content/Daily/YYYY-MM-DD.md` in the template format
+4. Routes any `File: <Section>/<Name>.md` blocks to that exact path
+   (never overwrites existing files — those are skipped and logged)
+5. Publishes with `npx quartz sync`
+
+Doc conventions: a heading with the date starts each day; the four labels
+(One line / What happened / What I learned / Tomorrow) are recognized with or
+without bold. Log: `scripts/daily_sync.log`. Manual run:
+`python scripts/daily_sync.py` (add `--dry-run` to preview).
+
+⚠️ Everything in that Doc publishes to the public site — no secrets.
+
 ---
 
 ## ✍️ Writing a new article
