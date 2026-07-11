@@ -40,25 +40,25 @@ stray top-level folder would float around unlinked.)
 `templates/Daily Note.md` template — One line · What happened · What I
 learned · Tomorrow.
 
-## 🌙 Automated daily sync (Google Doc → site)
+## 🌙 Automated nightly sync (Google Drive → site)
 
-Alternative daily flow: write in the **"Daily Log" Google Doc** from any device.
-A Windows scheduled task ("SpiderVerse Daily Sync", 22:00 daily) runs
-`scripts/daily_sync.py`, which:
+Primary writing surface: the **"Spider-Verse" folder in Google Drive**, whose
+structure mirrors `content/` exactly. Write from any device; a Claude Code
+scheduled task (`spiderverse-daily-sync`, 22:00 daily, runs while the app is
+open — catches up on next launch otherwise) syncs it:
 
-1. Fetches the Doc via its markdown-export link (Doc must be link-shared, Viewer)
-2. Slices out any dated entries not yet published (catches up missed days)
-3. Writes them to `content/Daily/YYYY-MM-DD.md` in the template format
-4. Routes any `File: <Section>/<Name>.md` blocks to that exact path
-   (never overwrites existing files — those are skipped and logged)
-5. Publishes with `npx quartz sync`
+- **`Daily Log` Doc** (folder root) — journal entries under a date line with
+  One line / What happened / What I learned / Tomorrow. Parsed deterministically
+  by `scripts/daily_sync.py` (only missing days are created; `File:` blocks are
+  routed; nothing is ever overwritten).
+- **Topic Docs** — create a Google Doc inside the matching section folder (or a
+  new subfolder). Doc title becomes the note name; the folder chain becomes the
+  path. Synced once when new; after that the note is owned by Obsidian/the repo
+  and the sync never touches it again.
 
-Doc conventions: a heading with the date starts each day; the four labels
-(One line / What happened / What I learned / Tomorrow) are recognized with or
-without bold. Log: `scripts/daily_sync.log`. Manual run:
-`python scripts/daily_sync.py` (add `--dry-run` to preview).
+Manual run of the parser: `python scripts/daily_sync.py --input <file> [--dry-run]`.
 
-⚠️ Everything in that Doc publishes to the public site — no secrets.
+⚠️ Everything in that Drive folder publishes to the public site — no secrets.
 
 ---
 
