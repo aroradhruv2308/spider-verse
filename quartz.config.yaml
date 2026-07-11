@@ -10,7 +10,9 @@ configuration:
   baseUrl: aroradhruv2308.github.io/spider-verse
   ignorePatterns:
     - private
+    - "private/**"
     - templates
+    - "templates/**"
     - .obsidian
   theme:
     fontOrigin: googleFonts

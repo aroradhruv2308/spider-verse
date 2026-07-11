@@ -1044,12 +1044,12 @@ footer a {
 ::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   border-radius: 99px;
-  background: var(--gray);
+  background: var(--lightgray);
   background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
+  background: var(--gray);
   background-clip: padding-box;
 }
 
