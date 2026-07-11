@@ -1,15 +1,24 @@
 ---
 title: Fitness
+description: Training, nutrition, recovery, and the slow work of getting stronger.
 ---
 
-# 💪 Fitness
+<div class="dimension-intro">
+  <div class="dimension-copy">
+    <p class="dimension-code">04 / Move</p>
+    <p class="dimension-kicker">Strength is built in the return.</p>
+    <p>Training logs, progressive overload, nutrition, recovery, and the small choices that make showing up tomorrow easier.</p>
+    <div class="dimension-tags"><span>training</span><span>food</span><span>recovery</span></div>
+  </div>
+  <img class="dimension-art" src="../assets/spidey-hanging.png" alt="Spider-Man hanging upside down" loading="eager">
+</div>
 
-Training splits, progressive overload, nutrition, recovery, and gym notes.
-The dimension where I track how I get stronger.
+> [!tip] Field rule
+> The heroic part is rarely the perfect workout. It is returning for the next one.
 
-> [!quote] Your guide: Peter B. Parker
-> Look, I've been out of shape. Aggressively out of shape. And the secret nobody tells you is
-> that you don't get back up in one epic montage — you get back up, again and again, slightly less
-> sore each time. So we show up, we add a little weight, we eat something that isn't pizza. Mostly.
+## What lives here
 
-Training logs, program notes, nutrition experiments, and recovery lessons will stack up here — rep by rep.
+- Programs and workout logs
+- Exercise cues and progress
+- Nutrition experiments
+- Sleep, mobility, and recovery

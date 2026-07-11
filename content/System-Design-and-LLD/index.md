@@ -1,15 +1,24 @@
 ---
 title: System Design & LLD
+description: Architecture, scale, trade-offs, and low-level design.
 ---
 
-# 🏗️ System Design & LLD
+<div class="dimension-intro">
+  <div class="dimension-copy">
+    <p class="dimension-code">03 / Systems</p>
+    <p class="dimension-kicker">See the whole web before pulling one thread.</p>
+    <p>High-level architecture and low-level design: scaling, databases, caches, queues, interfaces, object models, and the trade-offs holding them together.</p>
+    <div class="dimension-tags"><span>architecture</span><span>scale</span><span>LLD</span></div>
+  </div>
+  <img class="dimension-art dimension-art--portrait" src="../assets/portraits/miguel.png" alt="Spider-Man 2099" loading="eager">
+</div>
 
-High-level system design (scaling, databases, caching, queues) and low-level
-design (LLD) — class diagrams, SOLID principles, and object modelling.
+> [!tip] Field rule
+> Every box and arrow should exist for a reason I can explain.
 
-> [!quote] Your guide: Miguel O'Hara (Spider-Man 2099)
-> I built an organization that spans dimensions. It did not run on vibes — it ran on architecture.
-> Every queue, every cache, every class boundary in here exists for a reason, and you will know that reason
-> before you ship it. Don't break the canon of your own design. Now — study.
+## What lives here
 
-Scaling notes, database trade-offs, LLD walkthroughs, and interview-style design problems will accumulate here, one blueprint at a time.
+- System-design walkthroughs
+- Database and messaging trade-offs
+- SOLID principles and design patterns
+- Interview blueprints and postmortems

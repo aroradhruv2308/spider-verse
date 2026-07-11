@@ -1,15 +1,24 @@
 ---
 title: General Concepts
+description: Mental models and useful ideas that connect more than one part of life.
 ---
 
-# 🧩 General Concepts
+<div class="dimension-intro">
+  <div class="dimension-copy">
+    <p class="dimension-code">08 / Crossovers</p>
+    <p class="dimension-kicker">Some ideas refuse one universe.</p>
+    <p>Mental models, cross-disciplinary concepts, and useful pieces of knowledge that keep connecting to everything else.</p>
+    <div class="dimension-tags"><span>models</span><span>ideas</span><span>connections</span></div>
+  </div>
+  <img class="dimension-art dimension-art--web" src="../assets/spider-web.png" alt="A spider web" loading="eager">
+</div>
 
-Mental models, cross-cutting ideas, and useful bits of knowledge that don't
-fit neatly into one of the other dimensions.
+> [!tip] Field rule
+> The best note is often the one that creates a useful bridge between two others.
 
-> [!quote] Your guide: Spider-Ham (Peter Porker)
-> Kid, I'm a cartoon pig who got bitten by a radioactive spider — categories mean nothing to me.
-> That's exactly why I run this dimension: the best ideas are the ones that jump genres.
-> A physics trick that fixes your calendar, an economics rule that explains your fridge. It can't hurt ya... probably!
+## What lives here
 
-Mental models, odd analogies, and ideas that refuse to stay in one universe will collect here.
+- Cross-disciplinary mental models
+- Explanations of everyday systems
+- Interesting analogies
+- Ideas that do not fit anywhere else

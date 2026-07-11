@@ -1,15 +1,24 @@
 ---
 title: Mind & Life
+description: Reflection, habits, psychology, philosophy, and living with more intention.
 ---
 
-# 🧠 Mind & Life
+<div class="dimension-intro">
+  <div class="dimension-copy">
+    <p class="dimension-code">05 / Inner world</p>
+    <p class="dimension-kicker">Make room for the quieter questions.</p>
+    <p>Psychology, philosophy, habits, reflection, and the slow work of understanding how I think, choose, and grow.</p>
+    <div class="dimension-tags"><span>reflection</span><span>habits</span><span>meaning</span></div>
+  </div>
+  <img class="dimension-art" src="../assets/gwen-crouch.png" alt="Gwen Stacy in her hood" loading="eager">
+</div>
 
-Psychology, philosophy, productivity, habits, and lessons on living well.
-The human side of the multiverse.
+> [!tip] Field rule
+> I do not need to have it figured out before I write honestly about it.
 
-> [!quote] Your guide: Gwen Stacy / Ghost-Spider
-> I process the hard stuff on a drum kit, but writing it down works too. This dimension is for
-> the quieter questions — why we do what we do, how to sit with a hard choice, how to grow without
-> pretending the heavy parts aren't heavy. You don't have to have it figured out to take notes on it.
+## What lives here
 
-Notes on psychology, habits, philosophy, and the slow work of becoming a steadier person will gather here.
+- Journaled lessons and decisions
+- Mental models for everyday life
+- Psychology and philosophy notes
+- Habits, attention, and emotional fitness

@@ -1,15 +1,24 @@
 ---
 title: English
+description: Vocabulary, grammar, pronunciation, and clearer expression.
 ---
 
-# 📖 English
+<div class="dimension-intro">
+  <div class="dimension-copy">
+    <p class="dimension-code">07 / Language</p>
+    <p class="dimension-kicker">Clear words make clearer worlds.</p>
+    <p>Vocabulary, grammar, pronunciation, idioms, and writing practice—collected to make both communication and thinking more precise.</p>
+    <div class="dimension-tags"><span>words</span><span>grammar</span><span>writing</span></div>
+  </div>
+  <img class="dimension-art dimension-art--portrait" src="../assets/portraits/scarlet.png" alt="Scarlet Spider" loading="eager">
+</div>
 
-Vocabulary, grammar, idioms, pronunciation, and writing practice.
-The dimension for sharpening how I use the language.
+> [!tip] Field rule
+> Learn the word, hear it in context, then use it before the day ends.
 
-> [!quote] Your guide: Spider-Man Noir
-> The city taught me that the right word, in the right place, hits harder than any punch.
-> In my world everything's black and white — but language? Language has all the color you'll ever need.
-> Stick around, kid. Learn a word a day. And if anybody asks, the egg creams are mine.
+## What lives here
 
-New vocabulary, grammar notes, idioms, and writing drills will keep filing into this dimension — one hard-boiled word at a time.
+- New vocabulary in context
+- Grammar and pronunciation notes
+- Idioms and natural phrasing
+- Short writing drills

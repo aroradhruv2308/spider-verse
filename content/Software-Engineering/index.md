@@ -1,15 +1,24 @@
 ---
 title: Software Engineering
+description: Code, tools, patterns, debugging, and the craft of building dependable software.
 ---
 
-# 💻 Software Engineering
+<div class="dimension-intro">
+  <div class="dimension-copy">
+    <p class="dimension-code">02 / Build</p>
+    <p class="dimension-kicker">Leave the code better than I found it.</p>
+    <p>Languages, tools, design patterns, debugging notes, and the practical lessons that turn code into dependable software.</p>
+    <div class="dimension-tags"><span>code</span><span>tools</span><span>debugging</span></div>
+  </div>
+  <img class="dimension-art" src="../assets/miles-phone.png" alt="Miles Morales checking his phone" loading="eager">
+</div>
 
-Languages, tools, design patterns, debugging notes, and clean-code craft.
-Everything I learn about building software well lives here.
+> [!tip] Field rule
+> Name things clearly, remove what is dead, and write down the bug that took all afternoon.
 
-> [!quote] Your guide: Margo "Spider-Byte" Kess
-> I patrol a digital dimension for a living, so trust me: code is a place, and you either
-> keep it clean or you get lost in it. Around here we name things properly, delete what's dead,
-> and leave every file a little better than we found it. Welcome to my beat.
+## What lives here
 
-New notes on languages, patterns, tooling, and hard-won debugging lessons will keep landing in this dimension.
+- Language and framework notes
+- Patterns, refactors, and code reviews
+- Tooling and developer workflows
+- Hard-won debugging lessons

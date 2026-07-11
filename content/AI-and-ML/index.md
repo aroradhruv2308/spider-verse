@@ -1,15 +1,24 @@
 ---
 title: AI & ML
+description: Models, papers, experiments, and the ideas behind intelligent systems.
 ---
 
-# 🤖 AI & Machine Learning
+<div class="dimension-intro">
+  <div class="dimension-copy">
+    <p class="dimension-code">01 / Intelligence</p>
+    <p class="dimension-kicker">Make machines less mysterious.</p>
+    <p>Notes on machine learning, deep learning, papers, models, and hands-on experiments—especially the parts that only become clear after building them.</p>
+    <div class="dimension-tags"><span>models</span><span>papers</span><span>experiments</span></div>
+  </div>
+  <img class="dimension-art" src="../assets/gwen-leap.png" alt="Spider-Gwen mid-leap" loading="eager">
+</div>
 
-Notes on machine learning, deep learning, models, papers, and hands-on experiments.
-Drop new notes in this folder and they'll show up here automatically.
+> [!tip] Field rule
+> Prefer one working experiment over ten saved tutorials.
 
-> [!quote] Your guide: Peni Parker (with SP//dr)
-> Hi hi! I pilot a mech that shares a link with my brain, so a whole dimension about
-> humans teaming up with intelligent machines? This is basically home. SP//dr and I will
-> be right here while you train things, break things, and retrain them — that's just how the loop works!
+## What lives here
 
-Expect gradients, model notes, paper summaries, and experiment logs to pile up here — some polished, some gloriously mid-training.
+- Concepts explained in my own words
+- Paper and course notes
+- Model experiments and evaluations
+- Mistakes worth remembering

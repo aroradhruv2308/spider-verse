@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: "🕸️ The Spider-Verse"
+  pageTitle: "DHRUV'S SPIDER-VERSE"
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -16,30 +16,37 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Bangers
-      body: Nunito
-      code: JetBrains Mono
+      header:
+        name: Barlow Condensed
+        weights: [600, 700]
+      body:
+        name: Space Grotesk
+        weights: [400, 500, 600]
+        includeItalic: true
+      code:
+        name: Space Mono
+        weights: [400, 600]
     colors:
       lightMode:
-        light: "#fdf6ec"
-        lightgray: "#eadfce"
-        gray: "#9b8d7c"
-        darkgray: "#3a2d52"
-        dark: "#1b1230"
-        secondary: "#d61c3c"
-        tertiary: "#1e4fd8"
-        highlight: "rgba(214, 28, 60, 0.10)"
-        textHighlight: "#fff23688"
+        light: "#F6F3EC"
+        lightgray: "#DCD7CC"
+        gray: "#746F68"
+        darkgray: "#292A30"
+        dark: "#0D0E13"
+        secondary: "#D91F2A"
+        tertiary: "#2456E6"
+        highlight: "rgba(217, 31, 42, 0.08)"
+        textHighlight: "#F4D13B66"
       darkMode:
-        light: "#16101f"
-        lightgray: "#2e2440"
-        gray: "#8577a3"
-        darkgray: "#e6def7"
-        dark: "#faf7ff"
-        secondary: "#ff2e97"
-        tertiary: "#00e5ff"
-        highlight: "rgba(255, 46, 151, 0.14)"
-        textHighlight: "#ffe93066"
+        light: "#0B0C12"
+        lightgray: "#24252E"
+        gray: "#92939D"
+        darkgray: "#E7E4DC"
+        dark: "#FFFDF8"
+        secondary: "#FF454D"
+        tertiary: "#75A0FF"
+        highlight: "rgba(255, 69, 77, 0.11)"
+        textHighlight: "#F4D13B55"
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
@@ -83,6 +90,7 @@ plugins:
     layout:
       position: right
       priority: 30
+      condition: has-toc
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
@@ -109,7 +117,7 @@ plugins:
     enabled: false
     order: 92
   - source: github:quartz-community/fonts
-    enabled: true
+    enabled: false
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
@@ -143,7 +151,7 @@ plugins:
   - source: github:quartz-community/og-image
     enabled: true
   - source: github:quartz-community/cname
-    enabled: true
+    enabled: false
   - source: github:quartz-community/canvas-page
     enabled: true
   - source: github:quartz-community/content-page
@@ -154,16 +162,25 @@ plugins:
     enabled: true
   - source: github:quartz-community/explorer
     enabled: true
+    options:
+      title: The Web
+      folderDefaultState: collapsed
+      folderClickBehavior: link
+      useSavedState: true
     layout:
       position: left
       priority: 50
   - source: github:quartz-community/graph
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 10
   - source: github:quartz-community/search
     enabled: true
+    options:
+      enablePreview: true
+      placeholder: Search the archive
+      title: Search notes
     layout:
       position: left
       priority: 20
@@ -175,6 +192,7 @@ plugins:
     layout:
       position: right
       priority: 50
+      condition: has-backlinks
   - source: github:quartz-community/article-title
     enabled: true
     layout:
@@ -225,10 +243,19 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        Source: https://github.com/aroradhruv2308/spider-verse
   - source: github:quartz-community/recent-notes
-    enabled: false
+    enabled: true
+    options:
+      title: Latest transmissions
+      limit: 5
+      linkToMore: false
+      showTags: false
+      hideTagPages: true
+      hideFolderPages: false
+    layout:
+      position: right
+      priority: 10
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -250,7 +277,7 @@ plugins:
         - tags
         - aliases
       excludedProperties: []
-      hidePropertiesView: false
+      hidePropertiesView: true
       delimiters: ---
       language: yaml
     order: 5
@@ -262,7 +289,7 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw

@@ -18,19 +18,27 @@ Everything else in this repo is the site engine; I don't touch it day-to-day.
 
 ```
 content/
-├── index.md                  ← homepage (Miles)
-├── AI-and-ML/                ← Peni Parker & SP//dr
-├── Software-Engineering/     ← Margo "Spider-Byte"
-├── System-Design-and-LLD/    ← Miguel O'Hara (2099)
-├── Fitness/                  ← Peter B. Parker
-├── General-Concepts/         ← Spider-Ham
-├── Mind-and-Life/            ← Gwen Stacy / Ghost-Spider
-└── English/                  ← Spider-Man Noir
+├── index.md                  ← homepage (hero + category cards)
+├── Daily/                    ← daily log (write here every day)
+├── AI-and-ML/
+├── Software-Engineering/
+├── System-Design-and-LLD/
+├── Fitness/
+├── General-Concepts/
+├── Mind-and-Life/
+├── English/
+├── Career-and-Money/
+├── assets/                   ← character art + portraits (not shown in explorer)
+└── templates/Daily Note.md   ← Obsidian template (ignored by the site build)
 ```
 
-**House rule:** never create new top-level folders. New folders always go *inside*
-one of the 7 dimensions. (The homepage links to exactly these 7 — a stray
-top-level folder would float around unlinked.)
+**House rule:** never create new top-level folders. New notes always go *inside*
+one of the 9 sections above. (The homepage cards link to exactly these 9 — a
+stray top-level folder would float around unlinked.)
+
+**Daily habit:** in Obsidian, create today's note in `Daily/` from the
+`templates/Daily Note.md` template — One line · What happened · What I
+learned · Tomorrow.
 
 ---
 
