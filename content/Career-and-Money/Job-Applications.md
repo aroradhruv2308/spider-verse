@@ -9,9 +9,9 @@ title: Job Applications
 
 | Company | Role | Applied on | Status | URL |
 | --- | --- | --- | --- | --- |
-| Pinegap |  | 2026-07-12 | applied | [link](https://www.linkedin.com/jobs/view/4410572819/) |
-| Composio |  | 2026-07-12 | applied | [link](https://www.linkedin.com/jobs/view/4412176286/) |
-| Broccoli |  | 2026-07-12 | applied | [link](https://www.linkedin.com/jobs/view/4437705461/) |
+| Pinegap | Founding Engineer | 2026-07-12 | applied | [link](https://www.linkedin.com/jobs/view/4410572819/) |
+| Composio | Founding Engineer | 2026-07-12 | applied | [link](https://www.linkedin.com/jobs/view/4412176286/) |
+| Broccoli | Founding Engineer | 2026-07-12 | applied | [link](https://www.linkedin.com/jobs/view/4437705461/) |
 | Warner Bros. Discovery | Senior Software Engineer - Java (Commerce Team), Hyderabad |  | interested | [link](https://www.linkedin.com/comm/jobs/view/4428899126) |
 | Sourcebot | Founding Engineer | 2026-07-06 | applied | [link](https://www.workatastartup.com/jobs/96308) |
 | Outmarket AI | Software Engineer |  | interested | [link](https://www.linkedin.com/comm/jobs/view/4437111713) |
