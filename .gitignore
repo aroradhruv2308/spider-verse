@@ -13,3 +13,8 @@ replit.nix
 quartz/cli/tui/dist/
 scripts/daily_sync.log
 scripts/doc_id.txt
+
+# Python build artifacts
+__pycache__/
+*.pyc
+scripts/sync_sheets.log
