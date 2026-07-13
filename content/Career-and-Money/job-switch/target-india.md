@@ -12,9 +12,9 @@ Target in India is the in-house **global capability center for Target Corporatio
 
 **Stack (from the JD family):** Java/Kotlin, Spring Boot, REST, Postgres/MongoDB, production backend systems.
 
-## Why I fit
+## Why this is worth applying to (my notes)
 
-This is a clean Java/Spring Boot backend match. At Zeta I've spent 3+ yrs on production backend — a Spring Boot provisioning service (Postgres, dry-run/wet-run APIs, bulk ops), MDC-baggage distributed traceability, and service SLOs — which maps directly onto Target's stack (Java/Kotlin, Spring Boot, Postgres/MongoDB) and their 2–4 yr backend band.
+Clean backend stack match (Java/Spring Boot/Postgres), level-appropriate (2–4 yrs), Bengaluru-based, and a stable, engineering-led org. This is a big company, so the winning move is a **referral**, not a founder DM.
 
 ## Apply channels
 
@@ -28,16 +28,22 @@ No public individual email — don't guess.
 
 - On LinkedIn, search **Target recruiters / talent acquisition (India)** and **backend engineering managers at Target in Bengaluru**. A referral from any Target engineer materially raises callback odds at a company this size — ask your network first.
 
-## Draft outreach note (LinkedIn — to a Target recruiter or a contact who can refer)
+## Outreach message (referral / recruiter note — big company)
 
-> Hi [name], I've applied for the Engineer – Target India (backend) role in Bengaluru and wanted to introduce myself. I have 3+ years of Java/Spring Boot backend at Zeta — I built a provisioning service on Postgres with dry-run/wet-run APIs and bulk ops, added distributed traceability across our APIs and Kubernetes flows, and owned service SLOs. Target's backend stack lines up closely with what I do day to day. If there's any chance of a referral or a quick chat, I'd really appreciate it.
+> Hi [name] — I've applied for the Engineer – Target India (backend) role and wanted to introduce myself. Honestly, I really respect the engineering Target does at scale — that's the kind of environment I want to build in.
+>
+> I won't pretend to know your internal systems, but I know the backend stack you work with and I genuinely enjoy that class of problem. I'm a curious engineer who's always building something, with real production experience.
+>
+> If my profile looks interesting, my resume is here: [your resume link]. If there's any chance of a referral or a quick chat, I'd really appreciate it.
 
-## Draft LinkedIn note (<300 chars)
+*When sending, paste your Google Drive resume link where it says `[your resume link]`. (Kept off this public page on purpose.)*
 
-> Hi [name] — I applied for the Engineer – Target India backend role in Bengaluru. 3y Java/Spring Boot at Zeta: built a Postgres provisioning service (dry/wet-run APIs, bulk ops), distributed tracing, service SLOs. Target's stack is a close match. Would appreciate a referral or quick chat.
+**Short LinkedIn connect note (<300 chars):**
+
+> Hi [name] — I've applied for the Engineer – Target India backend role and would love to connect. I really respect the backend engineering Target does at scale; I'm a curious engineer with real production experience in that kind of stack. Would appreciate a referral or a quick chat.
 
 ## Form question drafts
 
 Target's portal is a standard resume application (no long essays in the base flow). Keep the resume backend-forward. If a screening question like *"Why Target?"* appears:
 
-> I want to do high-quality backend at scale in a stable, engineering-led org — my Spring Boot/Postgres/Kubernetes work at Zeta maps directly onto Target's stack.
+> I want to do high-quality backend at scale in a stable, engineering-led org. I like that class of problem, I'm comfortable in the stack, and I'd rather let my work show it — my resume covers what I've built.

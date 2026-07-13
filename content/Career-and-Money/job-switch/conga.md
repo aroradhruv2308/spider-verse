@@ -12,9 +12,9 @@ Conga is an enterprise SaaS company for **revenue lifecycle management** — CPQ
 
 **Stack (from the JD):** Python, FastAPI, PyTest, Celery, LangChain/LangGraph, REST APIs, SQL + NoSQL (MongoDB, MSSQL, Postgres), CI/CD (Terraform, GitHub Actions), AWS + Azure.
 
-## Why I fit
+## Why this is worth applying to (my notes)
 
-The stack is almost a mirror of my AI work — Python, FastAPI, LangChain/LangGraph, GenAI, Postgres/Mongo, AWS/Azure — exactly what I used to build Osper's Python analysis engine and Neuron Search (FastAPI + Elasticsearch + OpenAI embeddings). My deterministic LLM orchestration and configurable metric-trust layer prove I ship *controlled* GenAI, not demos. The 3-yr minimum lines up with my experience.
+The stack is one I'm comfortable in, it's a real AI/ML team (not a bolt-on), the 3-yr minimum matches my level, and it's Bangalore-based.
 
 ## Apply channels
 
@@ -26,21 +26,29 @@ The stack is almost a mirror of my AI work — Python, FastAPI, LangChain/LangGr
 
 No individual public email found — don't guess one.
 
-- Search LinkedIn for **Conga "AI/ML" engineering managers in Bangalore** (the role reports to a *Sr. Manager, AI/ML*) and a **Conga India Talent Acquisition** recruiter. A short note + referral request beats a cold application at a company this size.
+- Search LinkedIn for **Conga "AI/ML" engineering managers in Bangalore** (the role reports to a *Sr. Manager, AI/ML*) and a **Conga India Talent Acquisition** recruiter. A short note + referral request beats a cold application.
 
-## Draft outreach note (LinkedIn / recruiter — optional; apply via Greenhouse regardless)
+## Outreach message (to a hiring manager / recruiter — apply via Greenhouse regardless)
 
-> Hi [name], I just applied for the Software Engineer, AI role in Bangalore. Quick context on fit: I ship production GenAI, not just prototypes — at Osper I built a Python/FastAPI analysis engine with a deterministic LLM orchestration layer so outputs stay controlled and repeatable, and I built Neuron Search on FastAPI + Elasticsearch + OpenAI embeddings. I also have 3+ yrs of Java/Spring Boot backend at Zeta. Happy to share more — thanks for considering.
+> Hi [name] — I'll be honest, I just really like what Conga's AI team is doing: bringing GenAI into enterprise revenue and contract workflows is a genuinely hard problem, and it's exactly the kind of thing I want to spend my time on.
+>
+> I won't pretend I know how you've built it internally — the website is never the full picture. What I can say: I'm a curious engineer who's always building something, and I've worked hands-on with the stack you're hiring for — Python, FastAPI, LangChain/GenAI, Postgres/Mongo — on systems at real production scale.
+>
+> I've applied through your careers page; if my profile looks interesting, my resume is here: [your resume link].
+>
+> Would love to chat about the Software Engineer, AI role.
 
-## Draft LinkedIn note (<300 chars)
+*When sending, paste your Google Drive resume link where it says `[your resume link]`. (Kept off this public page on purpose.)*
 
-> Hi [name] — just applied for Conga's Software Engineer, AI role (Bangalore). I ship production GenAI: at Osper I built a Python/FastAPI engine with a deterministic LLM orchestration layer, plus Neuron Search (FastAPI/Elasticsearch/embeddings). 3y Java backend too. Would value a quick chat.
+**Short LinkedIn connect note (<300 chars):**
+
+> Hi [name] — I really like what Conga's AI team is doing with GenAI in enterprise workflows. Won't pretend to know the internals, but I'm a curious engineer comfortable with your stack (Python/FastAPI/LangChain, Postgres/Mongo) at production scale. Applied via Greenhouse — would value a quick chat.
 
 ## Form question drafts (the Greenhouse form asks these)
 
 - **Years of relevant experience:** 3
 - **Brief description of your AI engineering experience:**
-  > At Osper (osperhq.ai), an AI business analyst for D2C brands I co-founded, I built the Python analysis engine: a deterministic orchestration layer where each signal area defines exactly what data to pull, how to prepare it, and what scoped question to ask the LLM — so output stays controlled and repeatable instead of one dump-everything prompt. I also built a configurable metric-trust layer that resolves metrics deterministically before anything reaches the model. Separately I built Neuron Search, an intelligent Shopify search on FastAPI, Elasticsearch and OpenAI embeddings with product enrichment, synonyms and spell correction. At Zeta I shipped a Microsoft Teams AI incident agent that summarizes incidents and tracks action items to speed production triage.
+  > I've built and shipped GenAI in production, not just prototypes. I built a Python/FastAPI analysis engine with a deterministic orchestration layer that keeps LLM output controlled and repeatable, and Neuron Search — an intelligent Shopify search on FastAPI, Elasticsearch and OpenAI embeddings (product enrichment, synonyms, spell correction). I also shipped an AI incident agent at work that summarizes production incidents and tracks action items. Comfortable across LangChain/LangGraph, vector search, RAG, and the surrounding backend and infra.
 - **Start date availability:** *[your call — e.g. 30–60 days]*
 - **Notice period / negotiability:** *[personal — fill in your current notice period]*
 - **Current salary (CTC):** *[personal — fill in]*

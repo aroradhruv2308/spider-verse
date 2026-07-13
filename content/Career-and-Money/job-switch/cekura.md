@@ -12,13 +12,13 @@ YC **Fall 2024** · ~15 people. Cekura builds **testing, observability and red-t
 
 **Founders (all IIT Bombay):** Tarush Agarwal (CEO, ex-quant finance) · Shashij Gupta (CTO, ex-Google Research NLP) · Sidhant Kabra (President).
 
-## Why I fit
+## Why this is worth applying to (my notes)
 
-Cekura's entire product is making conversational-AI agents reliable — the exact problem I solved at Osper, where I built a deterministic orchestration layer so each signal asks the LLM a scoped question and output stays controlled and repeatable. I bring 3+ yrs of production backend (Java/Spring Boot, Kubernetes, distributed tracing, dry-run validation at Zeta) plus real 0-to-1 founder experience and hands-on LLM/RAG/vector work. An early-stage MTS role rewards exactly that founder-plus-platform blend.
+Early-stage, well-funded, real customers, and the problem — reliability of conversational AI — is one I find genuinely interesting. India-based MTS role, new grads welcome, so experience level is flexible.
 
 ## Apply channels
 
-1. **Apply / message founders:** [Work at a Startup](https://www.workatastartup.com/) (search "Cekura") — WaaS sends a note straight to the founders; use the draft below.
+1. **Apply / message founders:** [Work at a Startup](https://www.workatastartup.com/) (search "Cekura") — WaaS sends a note straight to the founders; use the message below.
 2. **LinkedIn job post:** https://www.linkedin.com/comm/jobs/view/4438967222
 3. **Company site / book a call with a cofounder:** https://www.cekura.ai/ · https://cal.com/kabrasidhant
 
@@ -29,27 +29,24 @@ Cekura's entire product is making conversational-AI agents reliable — the exac
 - **Sidhant Kabra — Co-founder & President** — https://www.linkedin.com/in/sidhantkabra
 - **Public email (verified on Cekura's YC page):** founders@cekura.ai
 
-## Draft founder email
+## Outreach message (founder DM — no over-relating)
 
-> Subject: MTS (India) applicant — built reliable LLM systems at Osper
+> Hi Shashij — I'll keep this honest: I just really like what Cekura is building. Reliable, trustworthy conversational AI is a hard problem that actually matters, and it's the kind of thing I'd genuinely enjoy waking up to solve.
 >
-> Hi Shashij,
+> I'm not going to pretend I already know how you've built it — a website never tells the real story, and the hard, interesting parts always live under the hood. What I can tell you is this: I'm an engineer who's always building something, curious to a fault, and I've worked hands-on with the kind of stack you're hiring for — Python and Java, LLM/RAG features on top of real production infra — at genuine scale.
 >
-> I applied for the Member of Technical Staff (India) role on Work at a Startup, but wanted to reach out directly. I'm a backend engineer with 3+ years at Zeta building Java/Spring Boot platform systems — Kubernetes provisioning, distributed tracing, dry-run validation — and I also co-founded Osper (osperhq.ai), an AI business analyst for D2C brands that I took from 0 to 1 with real users.
+> If that sounds like a profile worth a look, my resume is here: [your resume link] — it shows everything I've actually shipped. I'd rather let the work talk than oversell myself in a message.
 >
-> Cekura pulls me in because making conversational AI reliable is exactly the problem I kept hitting at Osper. I built a deterministic orchestration layer where each signal defines precisely what data to pull and what scoped question to ask the LLM, so output stays controlled and repeatable instead of a dump-everything prompt. Testing and observability for agents feels like the natural next version of that work.
->
-> Resume attached. I'd love to chat if it's a fit.
->
-> Thanks,
-> Dhruv Arora · linkedin.com/in/dhruvarora2308
+> Would love to chat about your MTS (India) role.
 
-## Draft LinkedIn note (<300 chars)
+*When sending, paste your Google Drive resume link where it says `[your resume link]`. (Kept off this public page on purpose so the file isn't search-indexed.)*
 
-> Hi Shashij — applied for Cekura's MTS (India) role but wanted to connect. Backend eng (3y, Java/K8s at Zeta) + cofounded Osper (AI analyst for D2C). Built a deterministic LLM orchestration layer to keep agent outputs reliable — close to Cekura's mission. Would love to chat.
+**Short LinkedIn connect note (<300 chars):**
+
+> Hi Shashij — I really like what Cekura's building; reliable conversational AI is a problem I'd love to work on. Won't pretend to know your internals, but I'm a curious engineer, always building, with Python/Java + LLM/RAG at production scale. Would love to chat about the MTS (India) role.
 
 ## Form question drafts
 
-Cekura applies via Work at a Startup, which sends a short message to the founders — use the founder email above. If WaaS asks *"Why do you want to work here?"*:
+Cekura applies via Work at a Startup, which sends a short message to the founders — use the message above. If WaaS asks *"Why do you want to work here?"*:
 
-> Cekura is solving LLM reliability, the exact problem I solved at Osper with a deterministic orchestration layer. I want to build that at agent scale, and I bring production backend plus 0-to-1 founder experience.
+> I love the problem Cekura is solving — making conversational AI reliable and trustworthy. I'm a curious engineer who's always building, comfortable with your kind of stack at production scale, and I'd rather show that through my work than pitch it. My resume covers everything I've shipped.
