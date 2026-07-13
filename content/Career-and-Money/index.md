@@ -18,6 +18,7 @@ description: Work, interviews, leverage, personal finance, and building a steadi
 
 ## What lives here
 
+- [Job switch — daily application kits](job-switch/)
 - Interview and resume notes
 - Career experiments and decisions
 - Negotiation lessons
