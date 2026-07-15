@@ -107,7 +107,8 @@ prove it out loud. Tick a box, resync, done.*
 
 - [ ] 2-min spoken story ready: built MCP servers (tool schemas, 20+ tools, daily automated pipeline)
 - [ ] 2-min story: cost-tiered model routing (cheap model for matching, strong model for drafting)
-- [ ] 2-min story: deterministic LLM orchestration + human QC gate at Osper
+- [ ] 2-min story: deterministic LLM orchestration + manual review dashboard at Osper
+- [ ] 2-min story: built an MCP server for Osper so customers could use its tools from LLM clients
 - [ ] 2-min story: Kubernetes/distributed systems at banking-grade scale
 
 ## After the sprint
