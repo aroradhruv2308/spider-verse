@@ -69,12 +69,14 @@ prove it out loud. Tick a box, resync, done.*
 - [ ] Can answer: why hybrid wins on exact tokens? what the cross-encoder sees that embeddings can't? chunk size vs recall/precision? recall@k in one sentence?
 - [ ] Notes page + Friday mock interview
 
-## Week 4 — Breadth: TypeScript/Next.js · Voice · Fine-tuning
+## Week 4 — Advanced Agents · Voice · Fine-tuning
 
-**TypeScript + Next.js (Mon–Wed)**
-- [ ] [TS Handbook](https://www.typescriptlang.org/docs/handbook/): Basics → Everyday Types → Generics
-- [ ] [Next.js Learn](https://nextjs.org/learn) — first half
-- [ ] Mini-build: one typed React component + 2-page Next.js app locally
+**Advanced agent patterns & production AI (Mon–Wed)**
+- [ ] Anthropic — *Building Effective Agents* essay
+- [ ] Agent design patterns: ReAct, reflection, plan-and-execute, multi-agent, memory, human-in-the-loop ([2026 pattern guide](https://www.sitepoint.com/the-definitive-guide-to-agentic-design-patterns-in-2026/), [taxonomy](https://www.digitalapplied.com/blog/agent-architecture-patterns-taxonomy-2026))
+- [ ] Context engineering: window budgeting, compaction, long-term memory stores
+- [ ] Inference cost levers: prompt/prefix caching, batch APIs, model routing, quantization ([caching/batching/routing guide](https://www.gmicloud.ai/en/blog/llm-inference-cost-optimization-caching-batching-routing))
+- [ ] Mini-build: add a reflection node + planner/executor split (big model plans, cheap model executes) + prompt caching to Sandbox 1 — measure cost per run before/after, numbers in README
 
 **Voice agent (Sat)**
 - [ ] [Pipecat quickstart](https://docs.pipecat.ai/overview/introduction) voice bot running (STT → LLM → TTS)
