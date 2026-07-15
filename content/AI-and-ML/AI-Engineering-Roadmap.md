@@ -8,6 +8,13 @@ prove it out loud. Tick a box, resync, done.*
 
 **Progress:** Week 0 ☐ · Week 1 ☐ · Week 2 ☐ · Week 3 ☐ · Week 4 ☐
 
+## Parallel foundations (spread across the month)
+
+- [ ] Karpathy — [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/watch?v=7xTGNNLPyMI) (~3.5h — watch in pieces; the single best foundation video)
+- [ ] Short on time? Karpathy — [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) (1h) first
+- [ ] Skim the [MCP spec](https://modelcontextprotocol.io) once (~30 min) — align vocabulary with the official docs
+- [ ] Continue the [LLM-Basics notes series](/ai-and-ml/llm-basics/) with what the video teaches
+
 ## Week 0 — Setup (one evening)
 
 - [ ] API keys: Anthropic / OpenAI
@@ -59,6 +66,7 @@ prove it out loud. Tick a box, resync, done.*
 - [ ] [Instaclustr pgvector hybrid search tutorial](https://www.instaclustr.com/education/vector-database/pgvector-hybrid-search-benefits-use-cases-and-quick-tutorial/)
 - [ ] Read every line of the official [pgvector cross-encoder example](https://github.com/pgvector/pgvector-python/blob/master/examples/hybrid_search/cross_encoder.py)
 - [ ] Memorize the production shape: BM25 top-20 + vector top-20 → RRF merge → rerank → top 5 to the LLM
+- [ ] [sentence-transformers docs](https://www.sbert.net) — cross-encoder usage page (the sandbox uses it)
 
 **Build — Sandbox 3: three-mode retrieval**
 - [ ] Docker Postgres + pgvector; ingest 40–50 docs, chunk two ways (300 vs 800 tokens)
@@ -73,6 +81,7 @@ prove it out loud. Tick a box, resync, done.*
 
 **Advanced agent patterns & production AI (Mon–Wed)**
 - [ ] Anthropic — *Building Effective Agents* essay
+- [ ] [12-Factor Agents](https://github.com/humanlayer/12-factor-agents) — the practical production-agents companion
 - [ ] Agent design patterns: ReAct, reflection, plan-and-execute, multi-agent, memory, human-in-the-loop ([2026 pattern guide](https://www.sitepoint.com/the-definitive-guide-to-agentic-design-patterns-in-2026/), [taxonomy](https://www.digitalapplied.com/blog/agent-architecture-patterns-taxonomy-2026))
 - [ ] Context engineering: window budgeting, compaction, long-term memory stores
 - [ ] Inference cost levers: prompt/prefix caching, batch APIs, model routing, quantization ([caching/batching/routing guide](https://www.gmicloud.ai/en/blog/llm-inference-cost-optimization-caching-batching-routing))
@@ -91,6 +100,15 @@ prove it out loud. Tick a box, resync, done.*
 **Prove**
 - [ ] Can answer: what generics buy; the voice latency budget; LoRA in one paragraph; fine-tune vs RAG decision
 - [ ] Notes page + final full-month mock interview
+
+## Already true — rehearse, don't study
+
+*Skills with real production evidence behind them; the prep is saying it fluently, not learning it.*
+
+- [ ] 2-min spoken story ready: built MCP servers (tool schemas, 20+ tools, daily automated pipeline)
+- [ ] 2-min story: cost-tiered model routing (cheap model for matching, strong model for drafting)
+- [ ] 2-min story: deterministic LLM orchestration + human QC gate at Osper
+- [ ] 2-min story: Kubernetes/distributed systems at banking-grade scale
 
 ## After the sprint
 - [ ] All four sandbox folders public and pinned on [GitHub](https://github.com/aroradhruv2308)
