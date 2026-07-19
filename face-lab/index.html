@@ -82,7 +82,7 @@
 <body>
 <header>
   <h1>FACE <span>LAB</span></h1>
-  <div class="sub">random 3D heads · powered by Google's GNM parametric head model</div>
+  <div class="sub">random 3D heads · a parametric face model running in your browser</div>
 </header>
 <main>
   <div id="viewport">
@@ -100,8 +100,8 @@
     <div class="sliders" id="sliders"></div>
   </aside>
 </main>
-<footer>
-  Model: <a href="https://github.com/google/GNM" target="_blank" rel="noopener">GNM — Generative aNthropomorphic Model</a> (Google, Apache-2.0), compressed for the web. Drag to orbit, scroll to zoom.
+<footer id="footer">
+  Drag to orbit, scroll to zoom.
 </footer>
 
 <script type="importmap">
@@ -126,7 +126,9 @@ async function loadModel(url) {
   const headerLen = new DataView(buf).getUint32(0, true);
   const header = JSON.parse(new TextDecoder().decode(new Uint8Array(buf, 4, headerLen)));
   const base = 4 + headerLen;
-  const view = (spec, Type) => new Type(buf, base + spec.offset, spec.length);
+  // slice() copies, so sections need no 4-byte alignment in the file
+  const view = (spec, Type) => new Type(
+    buf.slice(base + spec.offset, base + spec.offset + spec.length * Type.BYTES_PER_ELEMENT));
   return {
     header,
     template:  view(header.template,  Float32Array),
@@ -135,6 +137,7 @@ async function loadModel(url) {
     exBasis:   view(header.exBasis,   Int16Array),
     idStd:     view(header.idStd,     Float32Array),
     exStd:     view(header.exStd,     Float32Array),
+    colors:    header.colors ? view(header.colors, Uint8Array) : null,
   };
 }
 
@@ -150,9 +153,11 @@ const camera = new THREE.PerspectiveCamera(35, 1, 0.01, 100);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-scene.add(new THREE.HemisphereLight(0xdde4ff, 0x33261f, 1.1));
-const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(1.5, 1.2, 2); scene.add(key);
-const rim = new THREE.DirectionalLight(0x6688ff, 0.7); rim.position.set(-2, 0.5, -1.5); scene.add(rim);
+scene.add(new THREE.HemisphereLight(0xdde4ff, 0x33261f, 0.55));
+// key light well off the camera axis so facial relief casts readable shading
+const key = new THREE.DirectionalLight(0xffffff, 2.0); key.position.set(3.0, 2.0, 1.0); scene.add(key);
+const fill = new THREE.DirectionalLight(0xaabbff, 0.6); fill.position.set(-1.5, 0.2, 1.5); scene.add(fill);
+const rim = new THREE.DirectionalLight(0x6688ff, 0.45); rim.position.set(-2, 0.5, -1.8); scene.add(rim);
 
 function resize() {
   const w = viewport.clientWidth, h = viewport.clientHeight;
@@ -264,9 +269,17 @@ try {
   geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
   geometry.setIndex(new THREE.BufferAttribute(model.triangles, 1));
 
-  mesh = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({
-    color: 0xd9b8a3, roughness: 0.62, metalness: 0.02,
-  }));
+  const material = new THREE.MeshStandardMaterial({
+    color: model.colors ? 0xffffff : 0xd9b8a3, roughness: 0.55, metalness: 0.02,
+    vertexColors: !!model.colors,
+    side: THREE.DoubleSide,   // robust against seam/pole winding quirks
+  });
+  if (model.colors) {
+    const c = new Float32Array(model.colors.length);
+    for (let i = 0; i < c.length; i++) c[i] = model.colors[i] / 255;
+    geometry.setAttribute('color', new THREE.BufferAttribute(c, 3));
+  }
+  mesh = new THREE.Mesh(geometry, material);
   scene.add(mesh);
 
   // frame the head
@@ -274,13 +287,25 @@ try {
   geometry.computeBoundingSphere();
   const bs = geometry.boundingSphere;
   controls.target.copy(bs.center);
-  camera.position.set(bs.center.x, bs.center.y, bs.center.z + bs.radius * 3.2);
+  // 3/4 view reads facial depth far better than a dead-on frontal
+  const az = 14 * Math.PI / 180, d = bs.radius * 4.0;
+  camera.position.set(bs.center.x + Math.sin(az) * d, bs.center.y + bs.radius * 0.12,
+                      bs.center.z + Math.cos(az) * d);
   camera.near = bs.radius / 50; camera.far = bs.radius * 50;
   camera.updateProjectionMatrix();
 
   buildSliders();
   randomFace();
   overlay.classList.add('hidden');
+
+  document.getElementById('footer').innerHTML =
+    (model.header.source === 'placeholder'
+      ? 'Model: procedural placeholder head (same file format as ' +
+        '<a href="https://github.com/google/GNM" target="_blank" rel="noopener">Google\'s GNM</a> — ' +
+        'drop in a GNM-baked <code>gnm_web.bin</code> to upgrade). '
+      : 'Model: <a href="https://github.com/google/GNM" target="_blank" rel="noopener">GNM — ' +
+        'Generative aNthropomorphic Model</a> (Google, Apache-2.0), compressed for the web. ') +
+    'Drag to orbit, scroll to zoom.';
 } catch (err) {
   overlayMsg.textContent =
     'Could not load model/gnm_web.bin — the baked GNM data is missing from this deployment. ' +
@@ -290,6 +315,15 @@ try {
 
 resize();
 renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); });
+
+// handle for tests/tools (harmless in production)
+window.__facelab = {
+  camera, controls, scene,
+  get geometry() { return geometry; },
+  get model() { return model; },
+  get center() { return geometry?.boundingSphere?.center; },
+  get radius() { return geometry?.boundingSphere?.radius; },
+};
 
 document.getElementById('btn-random').addEventListener('click', randomFace);
 document.getElementById('btn-reset').addEventListener('click', resetFace);

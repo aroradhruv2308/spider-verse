@@ -44,6 +44,8 @@ jobs:
         run: npx quartz plugin install
       - name: Build Quartz
         run: npx quartz build
+      - name: Add Face Lab app
+        run: cp -r face-lab public/face-lab
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
